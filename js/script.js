@@ -1,24 +1,9 @@
 /*jshint esversion: 6 */
 
-  /*const access_key = 'aeb995e7e969370ff057fa7ac98504ec';
-  const from = 'GBP';
-  const to = 'EUR';*/
-
   const wrapper = document.getElementById('wrapper');
   const checkoutTable = document.getElementById('checkoutTable');
   const checkoutButton = document.getElementById('checkoutButton');
   let total = 0;
-  const rates = [];
-
-  getRates = () => {
-  
-    fetch(`https://exchangeratesapi.io/api/latest?base=GBP`).then(function(response) {
-      return response.json();
-    })
-    .then(function(rates) {
-      console.log(rates);
-    });
-  };
 
   const products = 
   [
@@ -131,11 +116,4 @@
       <h1 id="checkoutTotal">Total: &pound;${total.toFixed(2)}</h1>`;
     checkoutTable.innerHTML = checkout;
   });
-
-
-   
-
-
-
-  //console.log(qtyValue);
   
