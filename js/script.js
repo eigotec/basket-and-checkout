@@ -42,7 +42,7 @@
     ${products.map(product =>
       `<div class="product">
         <h3>${product.name}</h3>
-        <img src="../../images/${product.name}.png" alt="${product.name}" />
+        <img src="../../images/${product.name.toLowerCase()}.png" alt="${product.name}" />
         <h4>&pound;${product.price.toFixed(2)}</h4>
         <div class="controls">
           <button class="minusQty">-</button>
